@@ -20,10 +20,10 @@ fun twoSumMap(nums: IntArray, target: Int): IntArray {
             val value = map[nums[i]]
             if (value != null) {
                 resultArray[0] = value + 1
-                resultArray[1] = i+1
+                resultArray[1] = i + 1
             }
         } else {
-            map[target-nums[i]] = i
+            map[target - nums[i]] = i
         }
     }
     return resultArray

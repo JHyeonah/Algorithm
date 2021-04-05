@@ -1,5 +1,6 @@
-class MeetingRoom {
-   fun main() {
+import jdk.nashorn.internal.objects.NativeArray.forEach
+
+fun main() {
         val in1 = Interval(7, 10)
         val in2 = Interval(2, 4)
         val in3 = Interval(0, 30)
@@ -13,7 +14,7 @@ class MeetingRoom {
         intervals.sortBy { it.start }
 
         println("interval size: ${intervals.size}")
-        
+
         for (i in 1 until intervals.size) {
             if (intervals[i-1].end > intervals[i].start) {
                 return false
@@ -28,6 +29,3 @@ class MeetingRoom {
             println(i.start.toString() + " " + i.end.toString())
         }
     }
-}
-
-data class Interval(val start: Int, val end: Int)
