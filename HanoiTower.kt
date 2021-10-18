@@ -2,7 +2,6 @@ class Solution {
     var answer = mutableListOf<IntArray>()
     fun solution(n: Int): Array<IntArray> {
          moveTower(n, 1, 2, 3)
-
          return answer.toTypedArray()
     }
 
