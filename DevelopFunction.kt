@@ -8,7 +8,7 @@ class DevelopFunction {
 
         for (i in progresses.indices) {
             val days = ceil((100f - progresses[i]) / speeds[i]).toInt()
-            queue.offer(days)   
+            queue.offer(days)    
         }
 
         while (!queue.isEmpty()) {
