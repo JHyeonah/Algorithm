@@ -1,5 +1,5 @@
 import java.util.*
-import kotlin.math.*
+import kotlin.math.ceil
 
 class DevelopFunction {
     fun solution(progresses: IntArray, speeds: IntArray): IntArray {
