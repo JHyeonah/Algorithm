@@ -1,4 +1,5 @@
 import java.util.*
+import kotlin.math.*
 
 class DevelopFunction {
     fun solution(progresses: IntArray, speeds: IntArray): IntArray {
@@ -6,12 +7,8 @@ class DevelopFunction {
         var queue: Queue<Int> = LinkedList<Int>()
 
         for (i in progresses.indices) {
-            val days = (100 - progresses[i]) / speeds[i]
-            if ((100 - progresses[i]) % speeds[i] != 0) {
-                queue.offer(days+1)
-            } else {
-                queue.offer(days)   
-            }
+            val days = ceil((100f - progresses[i]) / speeds[i]).toInt()
+            queue.offer(days)   
         }
 
         while (!queue.isEmpty()) {
