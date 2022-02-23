@@ -20,6 +20,8 @@ class CompareNumberAsString {
             answer = answer.concat(strNumbers[i]);
         }
         
+        if (answer.startsWith("0")) return "0";
+        
         return answer;
     }
 }
