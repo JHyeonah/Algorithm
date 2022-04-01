@@ -1,0 +1,38 @@
+fun gameOfThrones(s: String): String {
+    val map = HashMap<Char, Int>()
+    
+    for (ch in s) {
+        map.put(ch, map.getOrDefault(ch, 0) + 1)
+    }
+    
+    val valueList = ArrayList<Int>()
+    for ((key, value) in map) {
+        valueList.add(value)
+    }
+    
+    var oddCount = 0
+    for (i in valueList) {
+        if (i%2 != 0) 
+            oddCount++
+    }
+    
+    if (s.length % 2 == 0) {
+        if (oddCount >= 1) {
+            return "NO"
+        }
+    } else {
+        if (oddCount > 2) {
+            return "NO"
+        }
+    }
+    
+    return "YES"
+}
+
+fun main(args: Array<String>) {
+    val s = readLine()!!
+
+    val result = gameOfThrones(s)
+    
+    println(result)
+}
