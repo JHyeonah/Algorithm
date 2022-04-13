@@ -1,5 +1,4 @@
 fun whatFlavors(cost: Array<Int>, money: Int): Unit {
-    // Write your code here
     val map = HashMap<Int, Int>()
     
     for (i in 0 until cost.size) {
